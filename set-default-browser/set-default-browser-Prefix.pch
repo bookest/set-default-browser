@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'set-default-browser' target in the 'set-default-browser' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
