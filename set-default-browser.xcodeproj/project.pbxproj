@@ -10,6 +10,7 @@
 		0216133C159A8C83003A4270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0216133B159A8C83003A4270 /* Foundation.framework */; };
 		0216133F159A8C83003A4270 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0216133E159A8C83003A4270 /* main.m */; };
 		02161343159A8C83003A4270 /* set_default_browser.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 02161342159A8C83003A4270 /* set_default_browser.1 */; };
+		0216134E159A94E9003A4270 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0216134D159A94E9003A4270 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +30,9 @@
 		02161337159A8C83003A4270 /* set-default-browser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "set-default-browser"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0216133B159A8C83003A4270 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0216133E159A8C83003A4270 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		02161341159A8C83003A4270 /* set-default-browser-Prefix.pch */ = {isa = PBXFileReference; path = "set-default-browser-Prefix.pch"; sourceTree = "<group>"; };
+		02161341159A8C83003A4270 /* set-default-browser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "set-default-browser-Prefix.pch"; sourceTree = "<group>"; };
 		02161342159A8C83003A4270 /* set_default_browser.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = set_default_browser.1; sourceTree = "<group>"; };
+		0216134D159A94E9003A4270 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0216134E159A94E9003A4270 /* CoreServices.framework in Frameworks */,
 				0216133C159A8C83003A4270 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +68,7 @@
 		0216133A159A8C83003A4270 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0216134D159A94E9003A4270 /* CoreServices.framework */,
 				0216133B159A8C83003A4270 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -196,6 +200,10 @@
 		02161347159A8C83003A4270 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "set-default-browser/set-default-browser-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -205,6 +213,10 @@
 		02161348159A8C83003A4270 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "set-default-browser/set-default-browser-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
