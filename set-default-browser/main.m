@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-void setDefaultBrowser(NSBundle *bundle)
+static void setDefaultBrowser(NSBundle *bundle)
 {
     // AFAICT when you change the default browser via Safari's
     // preferences it changes the default handler for the following
