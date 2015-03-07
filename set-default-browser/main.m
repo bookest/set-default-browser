@@ -36,7 +36,7 @@ int main (int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        NSString *path = [[NSString alloc] initWithCString: argv[1]];
+        NSString *path = [NSString stringWithFormat: @"%s", argv[1]];
         NSBundle *bundle = [[NSBundle alloc] initWithPath: path];
         setDefaultBrowser(bundle);
     }
